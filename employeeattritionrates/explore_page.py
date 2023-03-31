@@ -9,7 +9,7 @@ import numpy as np
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Attrition Data.csv")
+    df = pd.read_csv("employeeattritionrates/Attrition Data.csv")
     df = df[["Age", "Attrition", "Department", "YearsAtCompany", "MaritalStatus", "EducationField", "MonthlyIncome", "NumCompaniesWorked"]]
 
     return df
