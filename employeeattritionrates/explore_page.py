@@ -46,9 +46,6 @@ def show_explore_page():
     
 
 
- 
-
-
 def add_transformed_columns(transformed_df, le_education, le_department, le_marital, le_attrition):
     transformed_attrition = le_attrition.fit_transform(df['Attrition'])
     transformed_df['Attrition'] = transformed_attrition.tolist()
@@ -65,7 +62,7 @@ def add_transformed_columns(transformed_df, le_education, le_department, le_mari
     return transformed_df
 
 def show_heatmap(t_data):
-     st.write(
+    st.write(
         """
     #### Heatmap
     """
