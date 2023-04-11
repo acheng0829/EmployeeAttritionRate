@@ -80,6 +80,7 @@ def show_rate_by_age(t_data):
         """)
     data = t_data.groupby(["Age"])["Attrition"].mean().sort_values(ascending=True)
     st.bar_chart(data)
+    st.markdown("""---""")
 
 def show_rate_by_marital(t_data):
     st.write(
@@ -92,6 +93,7 @@ def show_rate_by_marital(t_data):
     st.write("0: Divorced")
     st.write("1: Married")
     st.write("2: Single")
+    st.markdown("""---""")
 
 def show_income_by_age():
     st.write(
@@ -101,6 +103,7 @@ def show_income_by_age():
     )
     data = df.groupby(["Age"])["MonthlyIncome"].mean().sort_values(ascending=True)
     st.line_chart(data)
+    st.markdown("""---""")
 
 def show_pie_ed_field():
     #pie percentage of data from education field
