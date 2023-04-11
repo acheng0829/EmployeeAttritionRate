@@ -63,16 +63,7 @@ def predict_attrition_rate(age, dept, yrs_former_company, marital, ed_field, inc
 	x[:, 3] = le_marital.transform(x[:,3])
 	x[:, 4] = le_education.transform(x[:,4])
 	x = x.astype(float)
-	
-	if age < 1:
-		st.error('Invalid Age', icon="🚨")
-	elif yrs_former_company < 0:
-		st.error('Invalid Years at Former Company', icon="🚨")
-	elif income < 0:
-		st.error('Invalid Monthly Income Offered', icon="🚨")
-	elif companies_worked < 0:
-		st.error('Invalid Number of Companies Worked', icon="🚨")
-	else: 
-		attrition_probability = regressor_loaded.predict_proba(x) * 100
-		st.subheader("The estimated probability of Employee Attrition is: ")
-		st.subheader(str(round(attrition_probability[0][1], 2)) + "%")
+
+	attrition_probability = regressor_loaded.predict_proba(x) * 100
+	st.subheader("The estimated probability of Employee Attrition is: ")
+	st.subheader(str(round(attrition_probability[0][1], 2)) + "%")
