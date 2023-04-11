@@ -62,6 +62,7 @@ def add_transformed_columns(transformed_df, le_education, le_department, le_mari
     return transformed_df
 
 def show_heatmap(t_data):
+    st.markdown("""---""")
     st.write(
         """
     #### Heatmap
@@ -70,6 +71,7 @@ def show_heatmap(t_data):
     fig = plt.figure(figsize=(14,14))
     sns.heatmap(t_data.corr(), annot=True, fmt = '.0%')
     st.write(fig)
+    st.markdown("""---""")
 
 def show_rate_by_age(t_data):
     st.write(
