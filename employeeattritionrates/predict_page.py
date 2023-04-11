@@ -23,13 +23,13 @@ def show_predict_page():
 
 	education_field, department, marital_status = populate_selectboxes()
 
-	marital = st.selectbox("Marital Status", marital_status)
-	ed_field = st.selectbox("Education Field", education_field)
-	dept = st.selectbox("Department", department)
-	yrs_former_company = st.text_input('***Years at Former Company***(Enter a Positive Whole Number)')
-	age = st.text_input('Age(Enter a Positive Whole Number)')
-	income = st.text_input('Monthly Income Offered(Enter a Positive Whole Number)')
-	companies_worked = st.text_input('Number of Companies Worked(Enter a Positive Whole Number)')
+	marital = st.selectbox("***Marital Status***", marital_status)
+	ed_field = st.selectbox("***Education Field***", education_field)
+	dept = st.selectbox("***Department***", department)
+	yrs_former_company = st.text_input('***Years at Former Company*** (Enter a Positive Whole Number)')
+	age = st.text_input('***Age*** (Enter a Positive Whole Number)')
+	income = st.text_input('***Monthly Income Offered*** (Enter a Positive Whole Number)')
+	companies_worked = st.text_input('***Number of Companies Worked*** (Enter a Positive Whole Number)')
 
 	btn_clicked = st.button("Calculate Attrition Probability")
 	if btn_clicked:
