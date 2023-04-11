@@ -65,6 +65,11 @@ def add_transformed_columns(transformed_df, le_education, le_department, le_mari
     return transformed_df
 
 def show_heatmap(t_data):
+     st.write(
+        """
+    #### Heatmap
+    """
+    )
     fig = plt.figure(figsize=(14,14))
     sns.heatmap(t_data.corr(), annot=True, fmt = '.0%')
     st.write(fig)
@@ -104,5 +109,5 @@ def show_pie_ed_field():
     fig1, ax1 = plt.subplots()
     ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
     ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
-    st.write("""#### Number of Data from different Education Fields""")
+    st.write("""#### Percentage of Data from Various Education Fields""")
     st.pyplot(fig1)
